@@ -10,6 +10,4 @@ Feel free to explore the solutions and use them as a reference for your own lear
 
 ## Contributing
 
-If you'd like to contribute to this repository by adding your own solutions or improving the existing ones, feel free to open a pull request. Your contributions are highly appreciated!
-
-Happy coding!
+TBD
