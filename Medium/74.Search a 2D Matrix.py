@@ -1,15 +1,3 @@
-# Solution/Trick:
-# Using Binary Search on a non decreasing array
-# Trick:
-# idx = no of column * which row idx is + which column idx is
-# eg:
-#     [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-#     index 3(element = 4) = 3(no of column) * 1(what row is the idx) + 0(which column is the idx)
-# rowthpostion = idx // column
-# columnthpostion = idx % column
-# elem = matrix[row][column]
-
-
 def searchMatrix(matrix, target):
     rows = len(matrix)
     columns = len(matrix[0])
@@ -34,6 +22,28 @@ def searchMatrix(matrix, target):
     return False
 
 
+
+# Solution:
+# The solution is to use Binary Search, the same way one would do it on 1-D array
+
+# Trick:
+# A 2-d array can be represented into a 1-D array.
+# Index of a element = no. of total columns in matrix * row postion of the element + column position of the element
+
+# Example:
+#     matrix = [[1, 2, 3],
+#               [4, 5, 6],
+#               [7, 8, 9]]
+# element 4 is on column 0(counting starts from 0), and row 1. There are 3 total columns(nC)
+#  Let column postion be Cp, and row position be Rp
+# So the index of element 4 = nC * Rp + Cp
+# index 3(element = 4) = 3 * 1 + 0 = 3
+# matrix(if viewed as 1-d array), 4 = matrix[3]
+# To access a 2-D matrix, we can do the following:
+# We need the row postion and column postion of an element to access it. 
+# rowthpostion = idx // column
+# columnthpostion = idx % column
+# elem = matrix[row][column]
 
 
 
